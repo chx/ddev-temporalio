@@ -2,5 +2,11 @@ name: temporalio
 
 project_files:
   - docker-compose.temporalio.yaml
+  - temporalio/
+  - traefik/config/temporalio-ui.yaml
+  - temporalio-post-install.sh
+post_install_actions:
+   - ./temporalio-post-install.sh
+   - rm -f ./temporalio-post-install.sh
 
 ddev_version_constraint: '>= v1.24.10'
