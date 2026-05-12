@@ -3,11 +3,11 @@
 [![last commit](https://img.shields.io/github/last-commit/chx/ddev-temporalio)](https://github.com/chx/ddev-temporalio/commits)
 [![release](https://img.shields.io/github/v/release/chx/ddev-temporalio)](https://github.com/chx/ddev-temporalio/releases/latest)
 
-# DDEV Temporalio
+# DDEV Temporal.io
 
 ## Overview
 
-This add-on integrates Temporalio into your [DDEV](https://ddev.com/) project.
+This add-on integrates [Temporal.io](https://temporal.io) into your [DDEV](https://ddev.com/) project.
 
 ## Installation
 
@@ -45,4 +45,4 @@ All customization options (use with caution):
 
 ## Credits
 
-**Contributed and maintained by [@chx](https://github.com/chx)**
+**Contributed and maintained by [@chx](https://github.com/chx) with sponsorship from [Tag1 Consulting](https://tag1consulting.com/)**
