@@ -1,6 +1,6 @@
 services:
 
-  temporalio:
+  temporalio-server:
     container_name: ddev-${DDEV_SITENAME}-temporalio-server
     build:
       context: .
@@ -32,7 +32,7 @@ services:
   temporalio-ui:
     container_name: ddev-${DDEV_SITENAME}-temporalio-ui
     depends_on:
-      temporalio:
+      temporalio-server:
         condition: service_healthy
     environment:
       - TEMPORAL_ADDRESS=temporalio:7233
