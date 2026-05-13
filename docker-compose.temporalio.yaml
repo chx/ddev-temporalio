@@ -28,6 +28,9 @@ services:
       timeout: 3s
       start_period: 30s
       retries: 60
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
 
   temporalio-ui:
     container_name: ddev-${DDEV_SITENAME}-temporalio-ui
@@ -38,3 +41,6 @@ services:
       - TEMPORAL_ADDRESS=temporalio:7233
       - TEMPORAL_CORS_ORIGINS=http://localhost:3000
     image: temporalio/ui
+    labels:
+      com.ddev.site-name: ${DDEV_SITENAME}
+      com.ddev.approot: ${DDEV_APPROOT}
