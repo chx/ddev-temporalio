@@ -16,7 +16,6 @@ services:
       - MYSQL_SEEDS=db
       - BIND_ON_IP=0.0.0.0
       - DYNAMIC_CONFIG_FILE_PATH=config/dynamicconfig/development-sql.yaml
-      - TEMPORAL_ADDRESS=temporal:7233
       - DEFAULT_NAMESPACE=default
     volumes:
       - ./temporalio/dynamicconfig:/etc/temporal/config/dynamicconfig
@@ -38,7 +37,7 @@ services:
       temporalio-server:
         condition: service_healthy
     environment:
-      - TEMPORAL_ADDRESS=temporalio:7233
+      - TEMPORAL_ADDRESS=temporalio-server:7233
       - TEMPORAL_CORS_ORIGINS=http://localhost:3000
     image: temporalio/ui
     labels:

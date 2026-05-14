@@ -3,6 +3,7 @@ name: temporalio
 project_files:
   - docker-compose.temporalio.yaml
   - temporalio/
+  - web-build/Dockerfile.grpc
   - traefik/config/temporalio-ui.yaml
   - temporalio-post-install.sh
 post_install_actions:
